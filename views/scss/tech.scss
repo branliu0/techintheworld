@@ -1,0 +1,108 @@
+@import "bourbon/bourbon";
+
+$gray_text: #999;
+$container_padding: 20px;
+
+/* body { */
+  /* background-image: url("/img/dust.png"); */
+  /* background-repeat: repeat; */
+/* } */
+
+/* .container { */
+  /* background-color: white; */
+  /* padding: $container_padding; */
+  /* @include box-shadow(-2px 0px 3px rgba(0, 0, 0, 0.1)); */
+/* } */
+
+footer {
+  color: $gray_text;
+  font-size: 11px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #CCC;
+  @include box-shadow(0px -1px 0px rgba(0, 0, 0, 0.05));
+  margin-right: 240px;
+}
+
+#splash {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #CCC;
+  h1.main-title {
+    text-align: center;
+    font-size: 80px;
+    line-height: 100px;
+    font-variant: small-caps;
+    font-family: Times;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+#content {
+}
+
+#main_content {
+  padding-top: $container_padding;
+}
+
+#sidebar {
+  background-color: #EEE;
+  @include box-sizing(border-box);
+  border-right: 1px solid #CCC;
+  @include box-shadow(inset 2px 0px 1px rgba(0, 0, 0, 0.1));
+
+  // Positioning
+  margin-right: -$container_padding;
+  padding-left: $container_padding;
+  padding-top: 30px;
+
+  // Pull all the way to the bottom
+  margin-bottom: -9999px;
+  padding-bottom: 9999px;
+
+  float: right;
+  .sidebar-fixed {
+    #toc {
+      width: 230px;
+      background-color: #BADCFF;
+      ul {
+        margin: 0px;
+        @include box-shadow(0px 0px 3px #2366A8, 0px 1px 1px #2336A8);
+        li {
+          list-style: none;
+          padding: 5px;
+          border-bottom: 1px solid #2366A8;
+          box-shadow: 0px 1px #EEE;
+          cursor: pointer;
+          &:last-child {
+            border: none;
+          }
+          &:hover {
+            color: white;
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+            background-color: #2366A8;
+            @include transition(background-color 0.1s linear);
+          }
+        }
+
+        // Ribbon effect
+        position: relative;
+        &:after {
+          content: ' ';
+          position: absolute;
+          top: 100%;
+          right: 0px;
+          height: 0px;
+          width: 0px;
+          border-width: 7px 15px;
+          border-style: solid;
+          border-color: #9EC2E8 transparent transparent #9EC2E8;
+          z-index: -1;
+        }
+      }
+    }
+    #contact {
+      margin-top: 120px;
+    }
+  }
+}
