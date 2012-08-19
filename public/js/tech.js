@@ -1,6 +1,8 @@
 (function($) {
   $(document).ready(function() {
 
+    /*
+
     // Fixed TOC after scrolling to it
     $.waypoints.settings.scrollThrottle = 10;
     $("#toc").waypoint({
@@ -38,6 +40,7 @@
       },
       offset: 0
     });
+    */
   });
 
   function scrollTo(element) {

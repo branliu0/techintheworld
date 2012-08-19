@@ -9,79 +9,71 @@ $container_padding: 20px;
 }
 
 body {
-  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+header {
+  background-color: #45718C;
+  padding: 10px 0px 8px;
+  border-bottom: 1px solid #000833;
+  @include box-shadow(0px 1px 0px #EEE);
+  .brand {
+    cursor: pointer;
+    color: #EEE;
+    font-size: 24px;
+    line-height: 24px;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.section-divider {
+  height: 8px;
+  background-color: #45718C;
 }
 
 #landing {
-  background-color: #F3F9FD;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  border-bottom: 1px solid #CCC;
-  h1.main-title {
-    text-align: center;
-    font-size: 100px;
-    line-height: 100px;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-    font-family: "ff-nuvo-web-pro";
+  background-color: #2C2C2C;
+  .landing-image {
+    height: 600px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top center;
+    .caption {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      font-size: 24px;
+      font-weight: 200;
+    }
+  }
+  #landing_img1 {
+    background-image: url("/img/mobo_retro.jpg");
   }
 }
 
-#content {
+#mission {
   @include dust-bg;
-}
-
-#main_content {
-  padding-top: $container_padding;
-  h2 {
-    border-bottom: 1px solid #CCC;
-    margin-bottom: 10px;
+  padding-top: 40px;
+  .title {
+    color: #314650;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 200;
+    text-align: center;
   }
-}
-
-#sidebar {
-  @include box-sizing(border-box);
-
-  // Positioning
-  margin-right: -$container_padding;
-  padding-left: $container_padding;
-  padding-top: 30px;
-
-  float: right;
-  .sidebar-fixed {
-    width: 220px;
-    &.fixed {
-      position: fixed;
-      top: 100px;
-    }
-    ul#toc {
-      margin: 0;
-      width: 230px;
-      background-color: #BADCFF;
-      border: 1px solid #2366A8;
-      @include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
-      @include border-radius(4px);
-      li {
-        text-decoration: none;
-        list-style: none;
-        padding: 5px;
-        border-bottom: 1px solid #2366A8;
-        @include box-shadow(0px 1px #EEE);
-        cursor: pointer;
-        &:last-child {
-          border: none;
-          @include box-shadow(none);
-        }
-        &:hover, &.selected {
-          color: white;
-          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
-          background-color: #2366A8;
-          @include transition(background-color 0.1s linear);
-        }
-      }
-    }
-    #contact {
-      margin-top: 120px;
-    }
+  .title-underline {
+    height: 2px;
+    width: 300px;
+    background-color: #45718C;
+    @include border-radius(1px);
+    margin: 10px auto 20px;
   }
 }
 
