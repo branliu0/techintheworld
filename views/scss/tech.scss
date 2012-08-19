@@ -8,24 +8,12 @@ $container_padding: 20px;
   background-repeat: repeat;
 }
 
-footer {
-  @include dust-bg;
-  padding-bottom: 20px;
-  .divider {
-    margin: 10px;
-    margin-right: 240px;
-    height: 1px;
-    background-color: #AAA;
-    @include box-shadow(0px 1px 0px rgba(255, 255, 255, 0.8));
-  }
-  span {
-    color: $gray_text;
-    font-size: 11px;
-    padding: 10px;;
-  }
+body {
+  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #landing {
+  background-color: #F3F9FD;
   padding-top: 30px;
   padding-bottom: 60px;
   border-bottom: 1px solid #CCC;
@@ -35,7 +23,7 @@ footer {
     line-height: 100px;
     font-variant: small-caps;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-    font-weight: 200;
+    font-family: "ff-nuvo-web-pro";
   }
 }
 
@@ -74,6 +62,7 @@ footer {
       @include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
       @include border-radius(4px);
       li {
+        text-decoration: none;
         list-style: none;
         padding: 5px;
         border-bottom: 1px solid #2366A8;
@@ -94,5 +83,22 @@ footer {
     #contact {
       margin-top: 120px;
     }
+  }
+}
+
+footer {
+  @include dust-bg;
+  padding-bottom: 20px;
+  .divider {
+    margin: 10px;
+    margin-right: 240px;
+    height: 1px;
+    background-color: #AAA;
+    @include box-shadow(0px 1px 0px rgba(255, 255, 255, 0.8));
+  }
+  span {
+    color: $gray_text;
+    font-size: 11px;
+    padding: 10px;;
   }
 }
