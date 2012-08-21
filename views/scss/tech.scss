@@ -13,6 +13,10 @@ body {
   font-weight: 300;
 }
 
+p {
+  text-align: justify;
+}
+
 header {
   background-color: #45718C;
   padding: 10px 0px 8px;
@@ -83,6 +87,10 @@ header {
     background-color: #45718C;
     @include border-radius(1px);
     margin: 10px auto 20px;
+  }
+  p.large {
+    font-size: 20px;
+    line-height: 120%;
   }
 }
 
