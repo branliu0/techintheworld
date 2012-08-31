@@ -13,3 +13,11 @@ get '/build/:name.css' do |name|
   content_type :css
   scss :"scss/#{name}", :layout => false
 end
+
+get '/proposal' do
+  redirect "https://docs.google.com/document/d/11-5EMSkbsVMd6X6QUlOgnrqSKC4-I284Ig9VzZhrtlU/edit"
+end
+
+get '/summary' do
+  redirect "https://docs.google.com/document/d/1GC1TlAeCeFyNOQzm5JDmQ7scqZY0-lv2q7SoquXc3KU/edit"
+end
