@@ -78,6 +78,22 @@ header {
       font-size: 24px;
       font-weight: 200;
     }
+    .attribution {
+      position: absolute;
+      bottom: 10px;
+      right: 40px;
+      padding: 2px 5px;
+      background-color: rgba(0, 0, 0, 0.85);
+      font-size: 11px;
+      font-weight: 200;
+      a {
+        color: white;
+        &:hover {
+          color: #08C;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
@@ -117,5 +133,15 @@ footer {
     color: $gray_text;
     font-size: 11px;
     padding: 10px;;
+  }
+  ul {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      list-style: none;
+    }
   }
 }
