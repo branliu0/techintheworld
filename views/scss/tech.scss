@@ -61,10 +61,13 @@ header {
   background-color: #2C2C2C;
   overflow: hidden;
   .landing-image {
-    height: 400px;
-    background-repeat: no-repeat;
-    background-position: top center;
     position: relative;
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 400px;
+      width: 1000px;
+    }
     .caption {
       position: absolute;
       bottom: 40px;
@@ -75,12 +78,6 @@ header {
       font-size: 24px;
       font-weight: 200;
     }
-  }
-  #landing_img1 {
-    background-image: url("/img/mobo_retro.jpg");
-  }
-  #landing_img2 {
-    background-image: url("/img/indian_doctor.jpg");
   }
 }
 
