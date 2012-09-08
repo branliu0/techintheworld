@@ -21,3 +21,9 @@ end
 get '/summary' do
   redirect "https://docs.google.com/document/d/1GC1TlAeCeFyNOQzm5JDmQ7scqZY0-lv2q7SoquXc3KU/edit"
 end
+
+["proposal", "team", "contact"].each do |url|
+  get "/#{url}" do
+    slim url.to_sym
+  end
+end
