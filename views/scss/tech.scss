@@ -2,6 +2,8 @@
 
 $gray_text: #999;
 $container_padding: 20px;
+$blue1: #45718C;
+$blue2: #314650;
 
 @mixin dust-bg {
   background-image: url("/img/dust.png");
@@ -20,10 +22,10 @@ p {
 }
 
 header {
-  background-color: #45718C;
+  background-color: $blue1;
   padding: 10px 0px 8px;
   border-bottom: 1px solid #000833;
-  @include box-shadow(0px 1px 0px #EEE);
+  @include box-shadow(0px 1px 1px #EEE);
   .brand {
     cursor: pointer;
     color: #EEE;
@@ -31,6 +33,7 @@ header {
     line-height: 24px;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
     &:hover {
+      @include transition(all 0.3s linear);
       color: white;
     }
   }
@@ -38,7 +41,7 @@ header {
 
 .section-divider {
   height: 8px;
-  background-color: #45718C;
+  background-color: $blue1;
 }
 
 .divider {
@@ -85,7 +88,7 @@ header {
   @include dust-bg;
   padding-top: 40px;
   .title {
-    color: #314650;
+    color: $blue2;
     font-size: 40px;
     line-height: 48px;
     font-weight: 200;
@@ -94,7 +97,7 @@ header {
   .title-underline {
     height: 2px;
     width: 300px;
-    background-color: #45718C;
+    background-color: $blue2;
     @include border-radius(1px);
     margin: 10px auto 20px;
   }
