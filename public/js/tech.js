@@ -9,7 +9,7 @@
   });
 
   // Images
-  var image_ids = ["landing_img1", "landing_img2", "landing_img3"];
+  var image_ids = ["landing_img1", "landing_img2", "landing_img3", "landing_img4"];
   var image_idx = 0;
   function nextSlide() {
     var cur_id = image_ids[image_idx];
