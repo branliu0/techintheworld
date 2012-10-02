@@ -149,6 +149,60 @@ header {
   }
 }
 
+#team {
+	@include dust-bg;
+	h1 {
+		margin: 20px 0;
+		text-align: center;
+		clear: left;
+	}
+	
+	.row {
+		margin-bottom: 10px;
+	}
+	
+	.two_people {
+		margin-left: 175px;
+		.person {
+			width: 250px;
+		}
+	}
+	
+	.three_people {
+		margin-left: 102px;
+		.person {
+			width: 185px;
+		}
+	}
+	
+	.person {
+		margin-right: 100px;
+		float: left;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			max-height: 150px;
+			max-width: 150px;
+		}
+		
+		h2 {
+			margin: 5px 0;
+			text-align: center;
+			color: $blue1;	
+		}
+		
+		.bio {
+			color: #999;
+			text-align:justify;
+		}
+	}
+}
+
+#contact {
+	@include dust-bg;
+}
+
 footer {
   @include dust-bg;
   padding-bottom: 20px;
