@@ -14,12 +14,16 @@ get '/build/:name.css' do |name|
   scss :"scss/#{name}", :layout => false
 end
 
-get '/proposal' do
-  redirect "https://docs.google.com/document/d/11-5EMSkbsVMd6X6QUlOgnrqSKC4-I284Ig9VzZhrtlU/edit"
-end
+redirects = {
+  "/proposal" =>  "https://docs.google.com/document/d/11-5EMSkbsVMd6X6QUlOgnrqSKC4-I284Ig9VzZhrtlU/edit",
+  "/summary" =>  "https://docs.google.com/document/d/1GC1TlAeCeFyNOQzm5JDmQ7scqZY0-lv2q7SoquXc3KU/edit",
+  "/svc" => "https://docs.google.com/document/d/1gOnCZUtlVsw1aWU7hxu8u_sndhHc_RFm7r-TwwTk0Gs/edit"
+}
 
-get '/summary' do
-  redirect "https://docs.google.com/document/d/1GC1TlAeCeFyNOQzm5JDmQ7scqZY0-lv2q7SoquXc3KU/edit"
+redirects.each do |short_link, full_link|
+  get short_link do
+    redirect full_link
+  end
 end
 
 ["proposal", "team", "contact"].each do |url|
