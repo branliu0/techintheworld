@@ -22,17 +22,14 @@ html
     link rel="stylesheet" href="/build/tech.css"
   body
     header
+      - nav_links = [["http://blog.techintheworld.org", "Blog"], ["/team", "Team"]]
       .container
-        span.brand.tk-ff-nuvo-web-pro Tech in the World
+        a.brand href="/" 
+			    span.tk-ff-nuvo-web-pro Tech in the World
         ul
-          li
-            a href="/proposal" Proposal
-		  li
-			a href="http://blog.techintheworld.org" Blog
-          li
-            a href="/team" Team
-          li
-            a href="/contact" Contact
+          - nav_links.each do |url, name|
+            li class="#{request.path == url ? "active" : ""}"
+              a href=url =name
     == yield
     footer
       .container

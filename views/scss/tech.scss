@@ -36,6 +36,7 @@ header {
     &:hover {
       @include transition(all 0.2s linear);
       color: white;
+			text-decoration: none;
     }
   }
   ul {
@@ -49,9 +50,16 @@ header {
       font-size: 16px;
       vertical-align: center;
       text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+				
+			&.active a {
+				color: white;
+				border-bottom: 1px solid #fff;
+			}
+
       a {
         color: #DDD;
         @include transition(all 0.2s linear);
+
         &:hover {
           color: white;
           text-decoration: none;
@@ -110,7 +118,7 @@ header {
       font-size: 11px;
       font-weight: 200;
       a {
-        color: white;
+        color: #888;
         &:hover {
           color: #08C;
           text-decoration: none;
@@ -153,8 +161,14 @@ header {
 	@include dust-bg;
 	h1 {
 		margin: 20px 0;
+		line-height: 48px;
+		font-size: 48px;
+		font-weight: 300;
+		text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 		text-align: center;
 		clear: left;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ccc;
 	}
 	
 	.row {
@@ -162,46 +176,85 @@ header {
 	}
 	
 	.two_people {
-		margin-left: 175px;
+		margin-left: 130px;
 		.person {
-			width: 250px;
-		}
-	}
-	
-	.three_people {
-		margin-left: 102px;
-		.person {
-			width: 185px;
+			&.first {
+				margin-right: 110px;
+			}
+			float: left;
+			width: 300px;
 		}
 	}
 	
 	.person {
-		margin-right: 100px;
-		float: left;
-		
+		margin-bottom: 20px;
 		img {
 			display: block;
 			margin: 0 auto;
-			max-height: 150px;
-			max-width: 150px;
+			max-height: 250px;
+			max-width: 250px;
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: white;
+			@include box-shadow(2px 5px 3px rgba(0, 0, 0, 0.2));
 		}
 		
-		h2 {
-			margin: 5px 0;
+		.name {
+			margin-top: 5px;
 			text-align: center;
 			color: $blue1;	
 		}
 		
+		.title {
+			margin-bottom: 7px;
+			font-size: 16px;
+			color: black;
+			text-align: center;
+		}
+		
+		.title-underline {
+			margin: 8px auto 10px;
+			width: 200px;
+			border-top: 1px solid $blue1;
+		}
+		
 		.bio {
-			color: #999;
+			margin: {right: auto; left: auto; }
+			color: #333;
 			text-align:justify;
+			max-width: 500px;
 		}
 	}
 }
 
 #contact {
-	@include dust-bg;
 }
+
+#proposal {
+	@include dust-bg;
+	
+	#side_bar {
+		margin-top: 20px;
+		
+		h3 {
+			color: $blue1;	
+		}
+		
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+		width: 20%;
+		float: left;
+	}
+	
+	#main_content {
+		margin-top: 20px;
+		width: 80%;
+		float: left;
+	}
+}
+
 
 footer {
   @include dust-bg;
