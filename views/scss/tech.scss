@@ -20,6 +20,13 @@ body {
 p { text-align: justify; }
 .center { text-align: center; }
 
+
+p.cause {
+  text-align: center;
+  font-size: 170%;
+  margin-top: 15px;
+}
+
 header {
   background-color: $blue1;
   padding: 10px 0px 8px;
