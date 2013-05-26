@@ -339,3 +339,22 @@ footer {
     border-bottom: 1px solid #ccc;
   }
 }
+
+#documentary {
+  padding-top: 20px;
+  @include dust-bg;
+  h1 {
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 300;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    clear: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .video {
+    margin-top: 20px;
+  }
+}

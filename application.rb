@@ -28,7 +28,7 @@ redirects.each do |short_link, full_link|
   end
 end
 
-["proposal", "team", "pilot"].each do |url|
+["proposal", "team", "pilot", "documentary"].each do |url|
   get "/#{url}" do
     slim url.to_sym
   end
