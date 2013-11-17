@@ -20,7 +20,8 @@ redirects = {
   "/svc" => "https://docs.google.com/document/d/1gOnCZUtlVsw1aWU7hxu8u_sndhHc_RFm7r-TwwTk0Gs/edit",
   "/donate" => "http://www.causes.com/actions/1701185",
   "/fellowship" => "https://docs.google.com/a/techintheworld.org/spreadsheet/viewform?usp=sharing&formkey=dENtSk5iQ3pmemExYUt6eUY5NjY3dVE6MQ#gid=0",
-  "/application" => "https://docs.google.com/a/techintheworld.org/forms/d/1Tp24p5iWpaqsQOaxsBiz1Bpc3vXsZARZ3pygI5m7rPE/viewform"
+  "/application" => "https://docs.google.com/a/techintheworld.org/forms/d/1Tp24p5iWpaqsQOaxsBiz1Bpc3vXsZARZ3pygI5m7rPE/viewform",
+  "/donate" => "https://www.causes.com/campaigns/64757-develop-global-health-software-solutions-in-tanzania"
 }
 
 redirects.each do |short_link, full_link|
